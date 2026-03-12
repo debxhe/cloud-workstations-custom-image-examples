@@ -32,5 +32,9 @@ RUN apt-get update && \
 # Merge in files from the assets directory
 COPY ./assets/. /
 
+RUN npm install -g @google/gemini-cli-a2a-server
+
+EXPOSE 8080 
+
 ENTRYPOINT ["/usr/bin/workstation-init"]
 
