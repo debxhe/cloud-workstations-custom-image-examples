@@ -1,0 +1,11 @@
+[Unit]
+Description=Start Gemini CLI Script
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/start-gemini-cli.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
